@@ -90,16 +90,22 @@ h3 {
      padding: 0;
 }
 
+
 #playercards {
-      border: 1px solid black;
+    border: 1px solid black;
     margin: 250px 50px 75px 100px;
       height: 350px;
      width: 60%;
+
      background-color: powderblue;
+}
+
+#playercards li {
+      
          list-style-type: none;
     overflow: hidden;
-    padding: 0;
-
+     padding: 10px;
+      display: inline;
 }
 
 #playercards ul {

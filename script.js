@@ -30,7 +30,7 @@ $('#draw-card').on('click', function() {
 
 	if (request.status >= 200 && request.status < 400) {
 		console.log(data)
-        $('#playercards').append('<li>'+ data.cards[0].value + " " + data.cards[0].suit + '<img src=' + data.cards[0].image + '>' + '</li>');	
+        $('#playercards').append('<li>' + '<img src=' + data.cards[0].image + '>' + '</li>');	
   		} else {
   	  		console.log('error')
   		}
@@ -38,3 +38,6 @@ $('#draw-card').on('click', function() {
 
 	request.send()
 });
+
+
+//+ data.cards[0].value + " " + data.cards[0].suit 
