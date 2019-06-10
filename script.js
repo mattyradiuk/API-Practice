@@ -29,7 +29,8 @@ $('#draw-card').on('click', function() {
 	var data = JSON.parse(this.response)
 
 	if (request.status >= 200 && request.status < 400) {
-        console.log(data)	
+		console.log(data)
+        $('#cardz').append('<li>'+ data.cards[0].value + " " + data.cards[0].suit + '</li>');	
   		} else {
   	  		console.log('error')
   		}
