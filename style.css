@@ -75,12 +75,19 @@ h3 {
 	padding: 50px;
 }
 
-#a1{
+#menu {
 	float: center;
 	padding: 50px;
 }
 
-#cards{}
+#dealercards {
+
+}
+
+#playercards {
+
+}
+
 
 #footer {
  	clear: both;

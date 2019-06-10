@@ -30,7 +30,7 @@ $('#draw-card').on('click', function() {
 
 	if (request.status >= 200 && request.status < 400) {
 		console.log(data)
-        $('#cardz').append('<li>'+ data.cards[0].value + " " + data.cards[0].suit + '</li>');	
+        $('#playercards').append('<li>'+ data.cards[0].value + " " + data.cards[0].suit + '<img src=' + data.cards[0].image + '>' + '</li>');	
   		} else {
   	  		console.log('error')
   		}
