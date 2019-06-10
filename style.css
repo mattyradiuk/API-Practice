@@ -81,11 +81,19 @@ h3 {
 }
 
 #dealercards {
-
+    list-style-type: none;
+      border: 1px solid black;
+     margin: 25px 50px 25px 100px;
+     background-color: lightblue;
+     padding: 0;
 }
 
 #playercards {
-
+    list-style-type: none;
+      border: 1px solid black;
+    margin: 250px 50px 75px 100px;
+     background-color: blue;
+     padding: 0;
 }
 
 
