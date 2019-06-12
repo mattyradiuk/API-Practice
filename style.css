@@ -1,6 +1,8 @@
-#dealercards {
-     background-color: lightblue;
-     padding: 0;
+#dealercards li {
+     float: top;
+              list-style-type: none;
+
+      display: inline;
 }
 
 
