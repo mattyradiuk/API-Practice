@@ -19,4 +19,6 @@
        top: 40px; /* Header Height */
        bottom: 20px; /* Footer Height */
        width: 99%;
+       padding-left: 50px;
+       padding-top: 60px;
 }
