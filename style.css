@@ -1,26 +1,73 @@
-
 #dealercards li {
      float: top;
-  list-style-type: none;
+              list-style-type: none;
 
       display: inline;
 }
+
 
 #playercards li {
       float:bottom;
-  list-style-type: none;
+         list-style-type: none;
 
       display: inline;
 }
-
-
 
 #gameboard {
       background-color: green;
         position: absolute;
-       top: 40px; /* Header Height */
-       bottom: 20px; /* Footer Height */
-       width: 99%;
-       padding-left: 50px;
-       padding-top: 60px;
+       top: 60px; /* Header Height */
+       bottom: 65px; /* Footer Height */
+       width: 95%;
+       padding-left: 275px;
+       padding-top: 10px;
+       margin-right: 500px
+}
+
+#gamemenu {
+  background-color: green;
+  overflow: hidden;
+  position: fixed;
+  bottom: 100px;
+  left: 800px;
+  width: 25%;
+  height: 65px;
+}
+
+.button1 {
+  padding: 15px 55px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+}
+
+.button1:hover {background-color: #3e8e41}
+
+.button1:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+.button2 {
+  padding: 15px 40px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+}
+
+.button2:hover {background-color: #3e8e41}
+
+.button2:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
 }

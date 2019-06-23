@@ -11,12 +11,21 @@
   </head>
 
   <body>
-	<div id="menu"><button id="new-game">New Game</button>
-  <button id="draw-card">Start</button> </div>
-  <div id="gameboard">
-  <ul id="dealerCards"> </ul>
-  <ul id="playerCards"> </ul>
+  <div id="topmenu">
+  	<button id="new-game">Reshuffle and Reset</button>
+  	<button id="draw-card">Start</button> 
   </div>
+
+  <div id="gameboard">
+  	<ul id="dealercards"> </ul>
+  	<ul id="playercards"> </ul>
+
+  	<div id="gamemenu"> 
+  		<button class="button1" id="button1">Hit</button>
+		<button class="button2">Stand</button> 
+	</div>
+  </div>
+
     <div id="root"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="script.js"></script>

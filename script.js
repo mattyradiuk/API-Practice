@@ -1,11 +1,9 @@
 var deckid = 0;
-var playerCount = 0;
-var dealerCount = 0;
 
 $('#new-game').on('click', function() {
 
-	$('#playerCards').empty();
-	$('#dealerCards').empty();
+	$('#playercards').empty();
+	$('#dealercards').empty();
 
 	var request = new XMLHttpRequest()
 
@@ -28,17 +26,35 @@ $('#new-game').on('click', function() {
 $('#draw-card').on('click', function() {
 	var request = new XMLHttpRequest()
 
-	request.open('GET', 'https://deckofcardsapi.com/api/deck/'+ window.deckid +'/draw/?count=4', true)
+	request.open('GET', 'https://deckofcardsapi.com/api/deck/'+ window.deckid +'/draw/?count=3', true)
 	request.onload = function() {
 
 	var data = JSON.parse(this.response)
 
 	if (request.status >= 200 && request.status < 400) {
 		console.log(data)
-        $('#playerCards').append('<li>' + '<img src=' + data.cards[0].image + '>' + '</li>');
-        $('#dealerCards').append('<li>' + '<img src=' + data.cards[1].image + '>' + '</li>');
-        $('#playerCards').append('<li>' + '<img src=' + data.cards[2].image + '>' + '</li>');	
-        $('#dealerCards').append('<li>' + '<img src=' + data.cards[3].image + '>' + '</li>');
+        $('#playercards').append('<li>' + '<img src=' + data.cards[0].image + '>' + '</li>');
+        $('#dealercards').append('<li>' + '<img src=' + data.cards[1].image + '>' + '</li>');
+        $('#playercards').append('<li>' + '<img src=' + data.cards[2].image + '>' + '</li>');	
+  		} else {
+  	  		console.log('error')
+  		}
+	}
+
+	request.send()
+});
+
+$('#button1').on('click', function() {
+	var request = new XMLHttpRequest()
+
+	request.open('GET', 'https://deckofcardsapi.com/api/deck/'+ window.deckid +'/draw/?count=1', true)
+	request.onload = function() {
+
+	var data = JSON.parse(this.response)
+
+	if (request.status >= 200 && request.status < 400) {
+		console.log(data)
+        $('#playercards').append('<li>' + '<img src=' + data.cards[0].image + '>' + '</li>');	
   		} else {
   	  		console.log('error')
   		}
