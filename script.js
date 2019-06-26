@@ -38,6 +38,8 @@ $('#draw-card').on('click', function() {
         $('#playercards').append('<li>' + '<img src=' + data.cards[0].image + '>' + '</li>');
         $('#dealercards').append('<li>' + '<img src=' + data.cards[1].image + '>' + '</li>');
         $('#playercards').append('<li>' + '<img src=' + data.cards[2].image + '>' + '</li>');	
+        window.playerTotal = data.cards[0].value + data.cards[2].value
+        window.deckid = data.cards[1].value;
   		} else {
   	  		console.log('error')
   		}
