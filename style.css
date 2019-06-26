@@ -65,9 +65,9 @@
   border-radius: 15px;
 }
 
-.button2:hover {background-color: #pink}
+.button2:hover {background-color: pink}
 
 .button2:active {
-  background-color: #3e8e41;
+  background-color: pink;
   transform: translateY(4px);
 }

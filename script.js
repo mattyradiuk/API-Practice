@@ -32,20 +32,21 @@ $('#draw-card').on('click', function() {
 	request.onload = function() {
 
 	var data = JSON.parse(this.response)
-
+		window.playerTotal = data.cards[0].value + data.cards[2].value;
+        window.deckid = data.cards[1].value;
+        console.log(playerTotal);
 	if (request.status >= 200 && request.status < 400) {
 		console.log(data)
         $('#playercards').append('<li>' + '<img src=' + data.cards[0].image + '>' + '</li>');
         $('#dealercards').append('<li>' + '<img src=' + data.cards[1].image + '>' + '</li>');
         $('#playercards').append('<li>' + '<img src=' + data.cards[2].image + '>' + '</li>');	
-        window.playerTotal = data.cards[0].value + data.cards[2].value
-        window.deckid = data.cards[1].value;
   		} else {
   	  		console.log('error')
   		}
 	}
 
 	request.send()
+
 });
 
 $('#button1').on('click', function() {
