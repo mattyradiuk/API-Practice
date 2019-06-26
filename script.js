@@ -1,4 +1,6 @@
 var deckid = 0;
+var playerTotal = 0;
+var dealerTotal = 0;
 
 $('#new-game').on('click', function() {
 
