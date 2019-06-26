@@ -2,6 +2,8 @@ var deckid = 0;
 var playerTotal = 0;
 var dealerTotal = 0;
 
+// NEED TO CONVERT FACE CARDS TO VALUE 10!
+
 $('#new-game').on('click', function() {
 
 	$('#playercards').empty();
