@@ -32,9 +32,10 @@ $('#draw-card').on('click', function() {
 	request.onload = function() {
 
 	var data = JSON.parse(this.response)
-		window.playerTotal = data.cards[0].value + data.cards[2].value;
-        window.deckid = data.cards[1].value;
+		window.playerTotal = parseInt(data.cards[0].value) + parseInt(data.cards[2].value);
+        window.dealerTotal = data.cards[1].value;
         console.log(playerTotal);
+        console.log(dealerTotal);
 	if (request.status >= 200 && request.status < 400) {
 		console.log(data)
         $('#playercards').append('<li>' + '<img src=' + data.cards[0].image + '>' + '</li>');
@@ -56,7 +57,8 @@ $('#button1').on('click', function() {
 	request.onload = function() {
 
 	var data = JSON.parse(this.response)
-
+	window.playerTotal = window.playerTotal + parseInt(data.cards[0].value);
+	console.log(playerTotal)
 	if (request.status >= 200 && request.status < 400) {
 		console.log(data)
         $('#playercards').append('<li>' + '<img src=' + data.cards[0].image + '>' + '</li>');	
