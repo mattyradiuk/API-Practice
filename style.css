@@ -34,6 +34,13 @@
   height: 65px;
 }
 
+.dealerWins {
+	  position: absolute;
+  width: 50%;
+  bottom: 10px;
+  border: 3px solid #8AC007;
+}
+
 .button1 {
   padding: 15px 55px;
   font-size: 24px;

@@ -34,8 +34,15 @@ $('#draw-card').on('click', function() {
 	request.onload = function() {
 
 	var data = JSON.parse(this.response)
+		for(var i = 0; i < 3; i++){
+		if(data.cards[i].value == "KING" || data.cards[i].value == "QUEEN" || data.cards[i].value == "JACK"){
+                data.cards[i].value = 10;
+        }
+		if(data.cards[0].value == "ACE"){
+                data.cards[i].value = 1;
+        }}
 		window.playerTotal = parseInt(data.cards[0].value) + parseInt(data.cards[2].value);
-        window.dealerTotal = data.cards[1].value;
+        window.dealerTotal = parseInt(data.cards[1].value);
         console.log(playerTotal);
         console.log(dealerTotal);
 	if (request.status >= 200 && request.status < 400) {
@@ -52,13 +59,19 @@ $('#draw-card').on('click', function() {
 
 });
 
-$('#button1').on('click', function() {
+$('#hit').on('click', function() {
 	var request = new XMLHttpRequest()
 
 	request.open('GET', 'https://deckofcardsapi.com/api/deck/'+ window.deckid +'/draw/?count=1', true)
 	request.onload = function() {
 
 	var data = JSON.parse(this.response)
+	if(data.cards[0].value == "KING" || data.cards[0].value == "QUEEN" || data.cards[0].value == "JACK"){
+                data.cards[i].value = 10;
+        }
+		if(data.cards[0].value == "ACE"){
+                data.cards[i].value = 1;
+        }
 	window.playerTotal = window.playerTotal + parseInt(data.cards[0].value);
 	console.log(playerTotal)
 	if (request.status >= 200 && request.status < 400) {
