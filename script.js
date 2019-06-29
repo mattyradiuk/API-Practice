@@ -11,7 +11,7 @@ $('#new-game').on('click', function() {
 
 	var request = new XMLHttpRequest()
 
-	request.open('GET', 'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6', true)
+	request.open('GET', 'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=2', true)
 	request.onload = function() {
 
 	var data = JSON.parse(this.response)
