@@ -65,16 +65,42 @@ $('#hit').on('click', function() {
 
 	var data = JSON.parse(this.response)
 	if(data.cards[0].value == "KING" || data.cards[0].value == "QUEEN" || data.cards[0].value == "JACK"){
-                data.cards[i].value = 10;
+                data.cards[0].value = 10;
         }
 		if(data.cards[0].value == "ACE"){
-                data.cards[i].value = 1;
+                data.cards[0].value = 1;
         }
 	window.playerTotal = window.playerTotal + parseInt(data.cards[0].value);
 	console.log(playerTotal)
 	if (request.status >= 200 && request.status < 400) {
 		console.log(data)
         $('#playercards').append('<li>' + '<img src=' + data.cards[0].image + '>' + '</li>');	
+  		} else {
+  	  		console.log('error')
+  		}
+	}
+
+	request.send()
+});
+
+$('#stand').on('click', function() {
+	var request = new XMLHttpRequest()
+
+	request.open('GET', 'https://deckofcardsapi.com/api/deck/'+ window.deckid +'/draw/?count=1', true)
+	request.onload = function() {
+
+	var data = JSON.parse(this.response)
+	if(data.cards[0].value == "KING" || data.cards[0].value == "QUEEN" || data.cards[0].value == "JACK"){
+                data.cards[0].value = 10;
+        }
+		if(data.cards[0].value == "ACE"){
+                data.cards[0].value = 1;
+        }
+	window.dealerTotal = window.dealerTotal + parseInt(data.cards[0].value);
+	console.log(dealerTotal)
+	if (request.status >= 200 && request.status < 400) {
+		console.log(data)
+        $('#dealercards').append('<li>' + '<img src=' + data.cards[0].image + '>' + '</li>');	
   		} else {
   	  		console.log('error')
   		}
