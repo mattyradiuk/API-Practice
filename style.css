@@ -5,6 +5,22 @@
       display: inline;
 }
 
+#score {
+	  margin-left: 500px;
+  position: absolute;
+top: 0px;
+font-size: 24px;
+
+}
+
+
+#status {
+	  margin-left: 800px;
+  position: absolute;
+top: 0px;
+font-size: 24px;
+
+}
 
 #playercards li {
       float:bottom;
@@ -75,6 +91,44 @@
 .button2:hover {background-color: pink}
 
 .button2:active {
+  background-color: pink;
+  transform: translateY(4px);
+}
+
+.button3 {
+  padding: 12px 20px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+}
+
+.button3:hover {background-color: #3e8e41}
+
+.button3:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+.button4 {
+  padding: 12px 20px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+}
+
+.button4:hover {background-color: pink}
+
+.button4:active {
   background-color: pink;
   transform: translateY(4px);
 }
