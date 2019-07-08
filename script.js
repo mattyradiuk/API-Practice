@@ -83,12 +83,13 @@ $('#hit').on('click', function() {
         }
 	window.playerTotal = window.playerTotal + parseInt(data.cards[0].value);
 	console.log(playerTotal)
-		if(playerTotal < 21){
+		if(playerTotal < 22){
 			document.getElementById("status").innerHTML = "Player total is " + playerTotal;
 		}
 	if(playerTotal > 21){
 			document.getElementById("status").innerHTML = "Bust! You lose. Hit deal to play again."
 			window.playerScore = (window.playerScore-1);
+			document.getElementById("status2").innerHTML = "";
 			document.getElementById("score").innerHTML = "Score: " + playerScore;
 		}
 	if (request.status >= 200 && request.status < 400) {
@@ -105,26 +106,57 @@ $('#hit').on('click', function() {
 $('#stand').on('click', function() {
 	var request = new XMLHttpRequest()
 
-	request.open('GET', 'https://deckofcardsapi.com/api/deck/'+ window.deckid +'/draw/?count=1', true)
+	request.open('GET', 'https://deckofcardsapi.com/api/deck/'+ window.deckid +'/draw/?count=5', true)
 	request.onload = function() {
-
+	var i = 0;
 	var data = JSON.parse(this.response)
-	if(data.cards[0].value == "KING" || data.cards[0].value == "QUEEN" || data.cards[0].value == "JACK"){
-                data.cards[0].value = 10;
+	while(window.dealerTotal < 17){
+		if(data.cards[i].value == "KING" || data.cards[i].value == "QUEEN" || data.cards[i].value == "JACK"){
+                data.cards[i].value = 10;
         }
-		if(data.cards[0].value == "ACE"){
-                data.cards[0].value = 11;
+		if(data.cards[i].value == "ACE"){
+                data.cards[i].value = 11;
         }
-	window.dealerTotal = window.dealerTotal + parseInt(data.cards[0].value);
+	window.dealerTotal = window.dealerTotal + parseInt(data.cards[i].value);
+		if(dealerTotal > 16){
+		if(dealerTotal < 22){
+			document.getElementById("status2").innerHTML = "Dealer total is " + dealerTotal;
+		}
+		if(dealerTotal > 21){
+			document.getElementById("status").innerHTML = "Dealer busts! You win. Hit deal to play again."
+			document.getElementById("status2").innerHTML = "";
+			window.playerScore = (window.playerScore+1);
+			document.getElementById("score").innerHTML = "Score: " + playerScore;
+		}
+	}
 	console.log(dealerTotal)
-	if (request.status >= 200 && request.status < 400) {
+		if (request.status >= 200 && request.status < 400) {
 		console.log(data)
-        $('#dealercards').append('<li>' + '<img src=' + data.cards[0].image + '>' + '</li>');	
+        $('#dealercards').append('<li>' + '<img src=' + data.cards[i].image + '>' + '</li>');	
   		} else {
   	  		console.log('error')
   		}
+		i++;
+	}
+	if(dealerTotal < playerTotal){
+		document.getElementById("status").innerHTML = "You beat the dealer! Hit deal to play again."
+					document.getElementById("status2").innerHTML = "";
+			window.playerScore = (window.playerScore+1);
+			document.getElementById("score").innerHTML = "Score: " + playerScore;
+	}
+		if(dealerTotal > playerTotal && dealerTotal < 22){
+		document.getElementById("status").innerHTML = "House always wins! Hit deal to play again."
+					document.getElementById("status2").innerHTML = "";
+			window.playerScore = (window.playerScore-1);
+			document.getElementById("score").innerHTML = "Score: " + playerScore;
+	}
+			if(dealerTotal == playerTotal && dealerTotal < 22){
+		document.getElementById("status").innerHTML = "Its a tie! Hit deal to play again."
+					document.getElementById("status2").innerHTML = "";
+			document.getElementById("score").innerHTML = "Score: " + playerScore;
 	}
 
+	}	
 	request.send()
 });
 

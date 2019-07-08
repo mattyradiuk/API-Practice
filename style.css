@@ -13,9 +13,17 @@ font-size: 24px;
 
 }
 
-
 #status {
 	  margin-left: 800px;
+  position: absolute;
+top: 0px;
+font-size: 24px;
+
+}
+
+
+#status2 {
+	  margin-left: 1100px;
   position: absolute;
 top: 0px;
 font-size: 24px;
