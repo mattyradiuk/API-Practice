@@ -1,8 +1,7 @@
 #dealercards li {
      float: top;
-              list-style-type: none;
-
-      display: inline;
+     list-style-type: none;
+     display: inline;
 }
 
 #score {
