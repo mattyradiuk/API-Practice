@@ -43,7 +43,8 @@ $('#draw-card').on('click', function() {
 		if(data.cards[i].value == "ACE"){
                 data.cards[i].value = 11;
         }}
-		window.playerTotal = parseInt(data.cards[0].value) + parseInt(data.cards[2].value);
+		
+	window.playerTotal = parseInt(data.cards[0].value) + parseInt(data.cards[2].value);
         window.dealerTotal = parseInt(data.cards[1].value);
         console.log(playerTotal);
         console.log(dealerTotal);
@@ -54,6 +55,7 @@ $('#draw-card').on('click', function() {
 		} else {
 			document.getElementById("status").innerHTML = "Player total is " + playerTotal;
 		}
+		
 	if (request.status >= 200 && request.status < 400) {
 		console.log(data)
         $('#playercards').append('<li>' + '<img src=' + data.cards[0].image + '>' + '</li>');
@@ -65,7 +67,6 @@ $('#draw-card').on('click', function() {
 	}
 
 	request.send()
-
 });
 
 $('#hit').on('click', function() {
