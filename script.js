@@ -161,5 +161,4 @@ $('#stand').on('click', function() {
 	request.send()
 });
 
-
 //+ data.cards[0].value + " " + data.cards[0].suit 
