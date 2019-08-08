@@ -1,5 +1,5 @@
 # API-Practice
-Going to try and make a card game using http://deckofcardsapi.com/
+Tried to make a super simple card game using http://deckofcardsapi.com/
 
 * Still might implement betting but who knows
 
