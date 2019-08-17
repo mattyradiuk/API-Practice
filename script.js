@@ -27,7 +27,6 @@ $('#new-game').on('click', function() {
 });
 
 $('#draw-card').on('click', function() {
-	
 	$('#playercards').empty();
 	$('#dealercards').empty();
 	var request = new XMLHttpRequest()
