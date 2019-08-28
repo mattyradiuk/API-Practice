@@ -1,5 +1,4 @@
 /*!
- * Turns out I don't actually need this shit!
  * jQuery JavaScript Library v3.3.1
  * https://jquery.com/
  *
