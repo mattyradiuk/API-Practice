@@ -1,0 +1,141 @@
+#dealercards li {
+     float: top;
+     list-style-type: none;
+     display: inline;
+}
+
+#score {
+margin-left: 500px;
+ position: absolute;
+top: 0px;
+font-size: 24px;
+
+}
+
+#status {
+	  margin-left: 800px;
+  position: absolute;
+top: 0px;
+font-size: 24px;
+
+}
+
+
+#status2 {
+	  margin-left: 1100px;
+  position: absolute;
+top: 0px;
+font-size: 24px;
+
+}
+
+#playercards li {
+      float:bottom;
+         list-style-type: none;
+
+      display: inline;
+}
+
+#gameboard {
+      background-color: green;
+        position: absolute;
+       top: 60px; /* Header Height */
+       bottom: 65px; /* Footer Height */
+       width: 95%;
+       padding-left: 275px;
+       padding-top: 10px;
+       margin-right: 500px
+}
+
+#gamemenu {
+  background-color: green;
+  overflow: hidden;
+  position: fixed;
+  bottom: 100px;
+  left: 800px;
+  width: 25%;
+  height: 65px;
+}
+
+.dealerWins {
+	  position: absolute;
+  width: 50%;
+  bottom: 10px;
+  border: 3px solid #8AC007;
+}
+
+.button1 {
+  padding: 15px 55px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+}
+
+.button1:hover {background-color: #3e8e41}
+
+.button1:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+.button2 {
+  padding: 15px 40px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+}
+
+.button2:hover {background-color: pink}
+
+.button2:active {
+  background-color: pink;
+  transform: translateY(4px);
+}
+
+.button3 {
+  padding: 12px 20px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+}
+
+.button3:hover {background-color: #3e8e41}
+
+.button3:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+.button4 {
+  padding: 12px 20px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+}
+
+.button4:hover {background-color: pink}
+
+.button4:active {
+  background-color: pink;
+  transform: translateY(4px);
+}
