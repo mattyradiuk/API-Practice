@@ -1,9 +1,6 @@
 # API-Practice
-Tried to make a super simple card game using http://deckofcardsapi.com/
 
-* Still might implement betting but who knows
+* Going to work on my web development skills by applying whatever types of APIs I can get my hands on.
 
-* Was trying to practice Apis not css lol
-
-* Please check out the live version on my website! http://radiuk.ca
+* Starting with a super simple card game using http://deckofcardsapi.com/
 
