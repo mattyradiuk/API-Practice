@@ -64,7 +64,6 @@ $('#draw-card').on('click', function() {
   	  		console.log('error')
   		}
 	}
-
 	request.send()
 });
 
