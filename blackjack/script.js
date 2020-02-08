@@ -22,7 +22,6 @@ $('#new-game').on('click', function() {
   	  		console.log('error')
   		}
 	}
-
 	request.send()
 });
 
@@ -64,7 +63,6 @@ $('#draw-card').on('click', function() {
   	  		console.log('error')
   		}
 	}
-
 	request.send()
 });
 
